@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<title>KeyValueStore.js Demo</title>
+	<meta typeof="description" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="keyvaluestore.js"></script>
+	<script type="text/javascript" src="demo.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="bg-primary" style="width:100%; position:fixed; z-index:1">
+		<h3 id="alert" class="text-center"></h3>
+	</div>
+	<div id="app" class="container">
+		<div class="row">
+			<div class="col-xs-10 col-xs-push-1 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+				
+				<span class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true">
+						<span class="glyphicon glyphicon-globe"></span>
+						Language
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li id="lang-en"><a>English</a></li>
+						<li id="lang-ja"><a>日本語</a></li>
+					</ul>
+				</span>
+
+				<h1>KeyValueStore.js Demo</h1>
+				<p data-literal="appDescription"></p>
+
+
+				<a class="btn btn-default" href="https://github.com/retorillo/keyvaluestore.js"
+				   data-literal="gotoGithub"></a>
+			</div>
+		</div>
+
+		<div class="row" id="forms">
+			<div class="form col-xs-10 col-xs-push-1 col-sm-3 col-sm-push-1 col-md-2 col-md-push-2" id="write-form">
+				<h3 data-literal="writeTitle"></h3>
+				<p data-literal="writeDescription"></p>
+				<input id="write-key" type="text" data-label="Key" />
+				<label for="write-value">Value</label>
+				<textarea id="write-value"></textarea>
+				<button id="write-btn">Write</button>
+			</div>
+			<div class="form col-xs-10 col-xs-push-1 col-sm-3 col-sm-push-1 col-md-2 col-md-push-2" id="read-form">
+				<h3 data-literal="readTitle"></h3>
+				<p data-literal="readDescription"></p>
+				<input id="read-key" type="text" data-label="Key(s)" />
+				<textarea id="read-value" data-label="Pair(s)" readonly></textarea>
+				<button id="read-btn">Read</button>
+			</div>
+			<div class="form col-xs-10 col-xs-push-1 col-xs-6 col-sm-4 col-sm-push-1 col-md-2 col-md-push-2" id="delete-form">
+				<h3 data-literal="deleteTitle"></h3>
+				<p data-literal="deleteDescription"></p>
+				<button id="deldb-btn" data-literal="deleteButton"></button>
+			</div>
+			<div class="col-xs-10 col-xs-push-1 col-sm-10 col-sm-push-1 col-md-2 col-md-push-2">
+				<h3 data-literal="allKeysTitle"></h3>
+				<p data-literal="allKeysDescription"></p>
+				<ul id="all"></ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-10 col-xs-push-1 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2">
+				Copyright &copy; 2015 Retorillo
+			</div>
+		</div>
+	</div>
+</body>
+</html>
